@@ -58,7 +58,7 @@ class ClockIn(object):
         if '统一身份认证' in res.content.decode():
             #raise LoginError('登录失败，请核实账号密码重新登录')
             
-            api = "https://sc.ftqq.com/SCT145788TLeAdXO1oZ8fj2lC2KjPINAof.send"
+            api = "https://sc.ftqq.com/SCT147687TTqRUb7BGjQjemKt0G3NRwQqo.send"
             title = "登录失败，请核实账号密码重新登录！"
             content = """
             ZJU健康打卡推送
@@ -103,7 +103,7 @@ class ClockIn(object):
             else:
                 #raise RegexMatchError("未发现缓存信息，请先至少手动成功打卡一次再运行脚本")
                 
-                api = "https://sc.ftqq.com/SCT145788TLeAdXO1oZ8fj2lC2KjPINAof.send"
+                api = "https://sc.ftqq.com/SCT147687TTqRUb7BGjQjemKt0G3NRwQqo.send"
                 title = "未发现缓存信息，请先至少手动成功打卡一次！"
                 content = """
                 ZJU健康打卡推送
@@ -206,7 +206,7 @@ def main(username, password):
     except Exception as err:
         print('获取信息失败，请手动打卡，更多信息: ' + str(err))
        
-        api = "https://sc.ftqq.com/SCT145788TLeAdXO1oZ8fj2lC2KjPINAof.send"
+        api = "https://sc.ftqq.com/SCT147687TTqRUb7BGjQjemKt0G3NRwQqo.send"
         title = "获取信息失败，请手动打卡！"
         content = """
         ZJU健康打卡推送
@@ -225,7 +225,7 @@ def main(username, password):
         if str(res['e']) == '0':
             print('已为您打卡成功！')
             
-            api = "https://sc.ftqq.com/SCT145788TLeAdXO1oZ8fj2lC2KjPINAof.send"
+            api = "https://sc.ftqq.com/SCT147687TTqRUb7BGjQjemKt0G3NRwQqo.send"
             title = "已为您打卡成功！"
             content = """
             ZJU健康打卡推送
@@ -246,7 +246,7 @@ def main(username, password):
             elif res['m'].find("验证码错误") != -1: # 验证码错误
                 print('再次尝试')
                 
-                api = "https://sc.ftqq.com/SCT145788TLeAdXO1oZ8fj2lC2KjPINAof.send"
+                api = "https://sc.ftqq.com/SCT147687TTqRUb7BGjQjemKt0G3NRwQqo.send"
                 title = "验证码错误,再次尝试"
                 content = """
                 ZJU健康打卡推送
@@ -265,7 +265,7 @@ def main(username, password):
     except Exception:
         print('数据提交失败')
         
-        api = "https://sc.ftqq.com/SCT145788TLeAdXO1oZ8fj2lC2KjPINAof.send"
+        api = "https://sc.ftqq.com/SCT147687TTqRUb7BGjQjemKt0G3NRwQqo.send"
         title = "数据提交失败"
         content = """
         ZJU健康打卡推送
